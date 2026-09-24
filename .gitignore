@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+venv/
+.venv/
+*.egg-info/
+
+# Environment
+.env
+!.env.example
+
+# SQLite DB (auto-created by seed_data.py)
+*.db
+*.db-wal
+*.db-shm
+
+# Node
+ui/node_modules/
+ui/dist/
+ui/.vite/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+.DS_Store

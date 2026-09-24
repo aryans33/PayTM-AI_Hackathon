@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: upi-dispute-agent-api
+    runtime: python
+    plan: free
+    region: singapore  # closest to India
+
+    buildCommand: pip install -r requirements.txt && python mock_data/seed_data.py
+
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false   # you will paste this in the Render dashboard (never committed)
+
+      - key: PYTHON_VERSION
+        value: 3.11.0
